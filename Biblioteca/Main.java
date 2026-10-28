@@ -1,3 +1,4 @@
+
 package Biblioteca;
 
 public class Main {
@@ -5,7 +6,7 @@ public class Main {
 
         System.out.println("##### BIBLIOTECA: CIENCIA E INGENIERÍA #####\n");
 
-        // 1. Creamos 10 objetos (instancias) de la clase Libro
+        // 1. Creamos 20 objetos de la clase Libro
         Libro libro1  = new Libro("Breve historia del tiempo", "Stephen Hawking", 1988);
         Libro libro2  = new Libro("El origen de las especies", "Charles Darwin", 1859);
         Libro libro3  = new Libro("Principia", "Isaac Newton", 1687);
@@ -17,10 +18,24 @@ public class Main {
         Libro libro9  = new Libro("Primavera silenciosa", "Rachel Carson", 1962);
         Libro libro10 = new Libro("Cálculo", "James Stewart", 1996);
 
-        // Los agrupamos en un arreglo para recorrerlos fácilmente
+        
+        Libro libro11 = new Libro("Álgebra de Baldor", "Aurelio Baldor", 1941);
+        Libro libro12 = new Libro("Fundamentos de Física", "David Halliday", 1960);
+        Libro libro13 = new Libro("La estructura de las revoluciones científicas", "Thomas Kuhn", 1962);
+        Libro libro14 = new Libro("Cosmos", "Carl Sagan", 1980);
+        Libro libro15 = new Libro("Introducción a la mecánica", "Kleppner y Kolenkow", 1973);
+        Libro libro16 = new Libro("Química", "Raymond Chang", 1984);
+        Libro libro17 = new Libro("La doble hélice", "James D. Watson", 1968);
+        Libro libro18 = new Libro("El universo en una cáscara de nuez", "Stephen Hawking", 2001);
+        Libro libro19 = new Libro("Geometría analítica", "Charles H. Lehmann", 1950);
+        Libro libro20 = new Libro("Cálculo diferencial e integral", "Granville", 1904);
+
+        // Agrupamos los 20 libros en un arreglo
         Libro[] biblioteca = {
             libro1, libro2, libro3, libro4, libro5,
-            libro6, libro7, libro8, libro9, libro10
+            libro6, libro7, libro8, libro9, libro10,
+            libro11, libro12, libro13, libro14, libro15,
+            libro16, libro17, libro18, libro19, libro20
         };
 
         System.out.println("===== CATÁLOGO INICIAL =====");
@@ -28,8 +43,9 @@ public class Main {
             libro.mostrarInfo();
         }
 
-        // 2. Creamos préstamos y les pasamos un objeto Libro completo
+        // 2. Creamos préstamos y pasamos un objeto Libro completo
         System.out.println("\n===== PRÉSTAMOS =====");
+
         Prestamo prestamo1 = new Prestamo("10/11/2026");
         prestamo1.procesarPrestamo(libro4);
 
